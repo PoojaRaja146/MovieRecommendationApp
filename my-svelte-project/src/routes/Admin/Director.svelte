@@ -1,6 +1,6 @@
-<!-- DirectorPage.svelte -->
+<!-- AdminPage.svelte -->
 <script>
-    import { Link } from "svelte-routing";
+    import {Link, link} from "svelte-routing";
 </script>
 
-<h1>Director Page</h1>
+<h1><Link to="/addDirector">Add Director</Link></h1>

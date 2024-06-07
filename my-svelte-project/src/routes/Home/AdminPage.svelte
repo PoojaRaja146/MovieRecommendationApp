@@ -10,3 +10,5 @@
 
 <h1><Link to="/genre">Genre</Link></h1>
 
+<h1><Link to="/movie">Movie</Link></h1>
+

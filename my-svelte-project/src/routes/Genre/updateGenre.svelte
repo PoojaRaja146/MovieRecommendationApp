@@ -18,7 +18,8 @@
   
     async function updateGenre() {
       try {
-        const response = await axios.put(`http://localhost:8086/api/v1/genres/update/${updatedGenre.id}`, updatedGenre, {
+        console.log(updateGenre.id,updateGenre);
+        const response = await axios.put(`http://localhost:8086/api/v1/genres/update/${updatedGenre.id}?name=${updatedGenre.name}`, {
           headers: {
             'Content-Type': 'application/json'
           }
