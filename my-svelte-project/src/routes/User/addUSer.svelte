@@ -1,15 +1,9 @@
 <script>
-    import { onMount } from 'svelte';
     import axios from 'axios';
   
-    let users = [];
     let newUser = { name: '', email: '' };
   
-    onMount(async () => {
-      const response = await axios.get('http://localhost:8086/api/v1/users/all');
-      users = response.data;
-    });
-  
+   
     async function addUser() {
     const formData = new URLSearchParams();
     formData.append('name', newUser.name);
@@ -29,13 +23,7 @@
   </script>
   
   <h1>Users</h1>
-  
-  <ul>
-    {#each users as user}
-      <li>{user.name} ({user.email})</li>
-    {/each}
-  </ul>
-  
+   
   <h2>Add User</h2>
   <form on:submit|preventDefault={addUser}>
     <label>

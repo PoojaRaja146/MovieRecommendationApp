@@ -12,3 +12,5 @@
 
 <h1><Link to="/movie">Movie</Link></h1>
 
+<h1><Link to="/user">User</Link></h1>
+
