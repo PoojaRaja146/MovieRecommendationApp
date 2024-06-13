@@ -3,7 +3,7 @@
     import axios from 'axios';
   
     let actors = [];
-    let newActor = { name: '', gender: '' };
+    let newActor = { firstName: '', lastName:'', gender: '' };
   
     onMount(async () => {
       const response = await axios.get('http://localhost:8086/api/v1/actors/all');
@@ -17,7 +17,7 @@
   
   <ul>
     {#each actors as user}
-      <li>{user.name} ({user.gender})</li>
+      <li>{user.firstName} {user.lastName} ({user.gender})</li>
     {/each}
   </ul>
   

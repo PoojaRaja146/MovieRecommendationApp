@@ -28,7 +28,7 @@
   <ul>
     {#each actors as Actor}
       <li>
-        {Actor.name}
+        {Actor.firstName}{Actor.lastName}
         <button on:click={() => selectedActorid = Actor.id}>Delete</button>
       </li>
     {/each}

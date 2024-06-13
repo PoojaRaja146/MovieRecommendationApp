@@ -1,13 +1,15 @@
 <script>
     import axios from 'axios';
   
-    let name = [];
-    let newActor = { name: '', gender: ''}; 
+    let firstName = [];
+    let lastName = [];
+    let newActor = { firstName: '', lastName:'', gender: ''}; 
    
   
     async function addDirector() {
     const formData = new URLSearchParams();
-    formData.append('name', newActor.name);
+    formData.append('firstName', newActor.firstName);
+    formData.append('lastName', newActor.lastName);
     formData.append('gender', newActor.gender);
 
     try {
@@ -26,13 +28,17 @@
   <h2>Add Actor</h2>
   <form on:submit|preventDefault={addDirector}>
     <label>
-      Name:
-      <input bind:value={newActor.name} />
+      FirstName:
+      <input bind:value={newActor.firstName} />
+    </label>
+    <label>
+      LastName:
+      <input bind:value={newActor.lastName} />
     </label>
     <label>
         Gender:
         <input bind:value={newActor.gender} />
       </label>
-    <button type="submit">Add Director</button>
+    <button type="submit">Add Actor</button>
   </form>
   

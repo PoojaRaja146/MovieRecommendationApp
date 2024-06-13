@@ -15,7 +15,7 @@
     });
   
     $: filteredDirectors = directors.filter(director =>
-      director.name.toLowerCase().includes(searchTerm.toLowerCase())
+      director.firstName.toLowerCase().includes(searchTerm.toLowerCase())
     );
   
     async function fetchMovies(directorId) {
@@ -45,13 +45,13 @@
     <ul>
       {#each filteredDirectors as director}
         <li>
-          <button on:click={() => selectDirector(director)}>{director.name}</button>
+          <button on:click={() => selectDirector(director)}>{director.firstName}{director.lastName}</button>
         </li>
       {/each}
     </ul>
   
     {#if selectedDirector}
-      <h2>Movies by {selectedDirector.name}</h2>
+      <h2>Movies by {selectedDirector.firstName}{selectedDirector.lastName}</h2>
       <ul>
         {#each movies as movie}
           <li>{movie.details}</li>

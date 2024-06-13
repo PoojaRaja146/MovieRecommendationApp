@@ -2,13 +2,14 @@
     import { onMount } from 'svelte';
     import axios from 'axios';
   
-    let name = [];
-    let newDirector = { name: '', gender: ''}; 
+    let firstName = [];
+    let newDirector = { firstName: '',lastName: '', gender: ''}; 
    
   
     async function addDirector() {
     const formData = new URLSearchParams();
-    formData.append('name', newDirector.name);
+    formData.append('firstName', newDirector.firstName);
+    formData.append('lastName', newDirector.lastName);
     formData.append('gender', newDirector.gender);
 
     try {
@@ -27,8 +28,12 @@
   <h2>Add Director</h2>
   <form on:submit|preventDefault={addDirector}>
     <label>
-      Name:
-      <input bind:value={newDirector.name} />
+      FirstName:
+      <input bind:value={newDirector.firstName} />
+    </label>
+    <label>
+      LastName:
+      <input bind:value={newDirector.lastName} />
     </label>
     <label>
         Gender:

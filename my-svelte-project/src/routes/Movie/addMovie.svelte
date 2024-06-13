@@ -103,7 +103,7 @@
       <select id="actor" bind:value={selectedActor}>
         <option value="">Select Actor</option>
         {#each actors as actor (actor.id)}
-          <option value={actor.id}>{actor.name}</option>
+          <option value={actor.id}>{actor.firstName}{actor.lastName}</option>
         {/each}
         <option value="other">Other</option>
       </select>
@@ -117,7 +117,7 @@
       <select id="director" bind:value={selectedDirector}>
         <option value="">Select Director</option>
         {#each directors as director (director.id)}
-          <option value={director.id}>{director.name}</option>
+          <option value={director.id}>{director.firstName}{director.lastName}</option>
         {/each}
         <option value="other">Other</option>
       </select>
