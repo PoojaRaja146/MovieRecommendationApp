@@ -20,7 +20,16 @@
     import UserPage from "./Home/UserPage.svelte";
     import SearchActor from "./Actor/searchActor.svelte";
     import SearchDirector from "./Director/searchDirector.svelte";
-    
+    import DeleteDirector from "./Director/deleteDirector.svelte";
+    import DeleteUser from "./User/deleteUser.svelte";
+    import DeleteActor from "./Actor/deleteActor.svelte";
+    import DeleteMovie from "./Movie/deleteMovie.svelte";
+    import SearchMovie from "./Movie/searchMovie.svelte";
+    import SearchUser from "./User/searchUser.svelte";
+    import LoginPage from "./Home/loginPage.svelte";
+    import ListDirector from "./Director/listDirector.svelte";
+    import ListMovie from "./Movie/listMovie.svelte";
+    import ListActor from "./Actor/listActor.svelte";
 
   export let url= "";
 </script>
@@ -63,5 +72,25 @@
     <Route path="/searchActor" component={SearchActor} />
 
     <Route path="/searchDirector" component={SearchDirector} />
+
+    <Route path="/deleteDirector" component={DeleteDirector} />
+
+    <Route path="/deleteUser" component={DeleteUser} />
+
+    <Route path="/deleteActor" component={DeleteActor} />
+
+    <Route path="/deleteMovie" component={DeleteMovie} />
+
+    <Route path="/searchMovie" component={SearchMovie} />
+
+    <Route path="/searchUser" component={SearchUser} />
+
+    <Route path="/loginPage" component={LoginPage} />
+
+    <Route path="/listDirector" component={ListDirector} />
+
+    <Route path="/listMovie" component={ListMovie} />
+
+    <Route path="/listActor" component={ListActor} />
 
 </Router>

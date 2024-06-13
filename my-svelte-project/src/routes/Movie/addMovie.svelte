@@ -5,6 +5,8 @@
   import '../../styles/styles.css';
 
   let movieName = '';
+  let movieRating = '';
+  let movieSummary = '';
   let language = '';
   let genres = [];
   let selectedGenre = '';
@@ -33,6 +35,8 @@
     formData.append('genreId', selectedGenre);
     formData.append('actorId', selectedActor);
     formData.append('directorId', selectedDirector);
+    formData.append('summary', movieSummary);
+    formData.append('rating', movieRating);
 
     try {
       console.log(formData.toString());
@@ -46,6 +50,8 @@
       if (response.status === 200) {
         // Reset the input fields
         movieName = '';
+        movieRating = '';
+        movieSummary = '';
         language = '';
         selectedGenre = '';
         selectedActor = '';
@@ -73,6 +79,7 @@
         <option value="en">English</option>
         <option value="fr">French</option>
         <option value="es">Spanish</option>
+        <option value="Tn">Tamil</option>
         <!-- Add more language options as needed -->
       </select>
     </div>
@@ -117,6 +124,16 @@
       {#if selectedDirector === 'other'}
         <a href="/addDirector" use:link>Add Director</a>
       {/if}
+    </div>
+
+    <div>
+      <label for="summary">Summary:</label>
+      <input id="summaryText" bind:value={movieSummary} />
+    </div>
+
+    <div>
+      <label for="rating">Movie Rating:</label>
+      <input id="movieRating" bind:value={movieRating} />
     </div>
 
     <button type="submit">

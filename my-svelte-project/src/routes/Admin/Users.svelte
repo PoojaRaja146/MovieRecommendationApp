@@ -8,4 +8,8 @@
 
 <h1><Link to="/listUser">List User</Link></h1>
 
+<h1><Link to="/deleteUser">Delete User</Link></h1>
+
+<h1><Link to="/searchUser">Search User</Link></h1>
+
 

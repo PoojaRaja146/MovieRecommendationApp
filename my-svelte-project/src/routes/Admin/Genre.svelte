@@ -10,4 +10,4 @@
 
 <h1><Link to="/deleteGenre">DeleteGenre</Link></h1>
 
-<h1><Link to="/searchGenre">SearchGenre</Link></h1>
+<h1><Link to="/searchGenre">Search Movies By Genre</Link></h1>
