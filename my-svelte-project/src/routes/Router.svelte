@@ -30,6 +30,10 @@
     import ListDirector from "./Director/listDirector.svelte";
     import ListMovie from "./Movie/listMovie.svelte";
     import ListActor from "./Actor/listActor.svelte";
+    import UpdateDirector from "./Director/updateDirector.svelte";
+    import UpdateActor from "./Actor/updateActor.svelte";
+    import UpdateMovie from "./Movie/updateMovie.svelte";
+    import UpdateUser from "./User/updateUser.svelte";
 
   export let url= "";
 </script>
@@ -92,5 +96,13 @@
     <Route path="/listMovie" component={ListMovie} />
 
     <Route path="/listActor" component={ListActor} />
+
+    <Route path="/updateDirector" component={UpdateDirector} />
+
+    <Route path="/updateActor" component={UpdateActor} />
+
+    <Route path="/updateMovie" component={UpdateMovie} />
+
+    <Route path="/updateUser" component={UpdateUser} />
 
 </Router>

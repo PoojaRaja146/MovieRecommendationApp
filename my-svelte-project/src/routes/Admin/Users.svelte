@@ -12,4 +12,6 @@
 
 <h1><Link to="/searchUser">Search User</Link></h1>
 
+<h1><Link to="/updateUser">Update User</Link></h1>
+
 
