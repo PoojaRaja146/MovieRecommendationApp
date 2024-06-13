@@ -14,7 +14,7 @@
 
   async function handleLogin() {
     const users = await fetchUsers();
-    const validUsernames = users.map((user) => user.name);
+    const validUsernames = users.map((user) => user.firstName);
 
     // Validate username
     if (!validUsernames.includes(username)) {

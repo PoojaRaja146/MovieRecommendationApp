@@ -21,7 +21,7 @@
   
     // Reactive statement to filter users based on search term
     $: filteredUsers = users.filter(user =>
-        user.name.toLowerCase().includes(searchTerm.toLowerCase())
+        user.firstName.toLowerCase().includes(searchTerm.toLowerCase())
     );
   
     // Function to fetch user details by user ID
@@ -54,17 +54,18 @@
     <ul>
         {#each filteredUsers as user}
             <li>
-                <button on:click={() => selectUser(user)}>{user.name}</button>
+                <button on:click={() => selectUser(user)}>{user.firstName}{user.lastName}</button>
             </li>
         {/each}
     </ul>
   
     {#if selectedUser}
-        <h2>User Details for {selectedUser.name}</h2>
+        <h2>User Details for {selectedUser.firstName} {selectedUser.lastName}</h2>
         {#if selectedUser}
             <ul>
                 <li>ID: {selectedUser.id}</li>
-                <li>Name: {selectedUser.name}</li>
+                <li>FirstName: {selectedUser.firstName}</li>
+                <li>LastName: {selectedUser.lastName}</li>
                 <li>Email: {selectedUser.email}</li>
                 <!-- Add more details as needed -->
             </ul>
